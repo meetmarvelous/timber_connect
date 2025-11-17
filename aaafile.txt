@@ -1,0 +1,81 @@
+timber-connect/
+├── index.php
+├── login.php
+├── logout.php
+├── marketer-register.php
+├── about.php
+├── contact.php
+├── terms.php
+├── privacy.php
+├── unauthorized.php
+├── forgot-password.php
+├── reset-password.php
+├── setup-database.php (optional - for initial setup)
+├── complete-database.sql (database backup)
+├── dashboard/
+│   ├── index.php (admin dashboard)
+│   ├── marketers.php
+│   ├── marketer-verify.php
+│   ├── species.php
+│   ├── inquiries.php
+│   ├── reports.php
+│   ├── settings.php
+│   └── marketer/
+│       ├── index.php
+│       ├── sidebar.php
+│       ├── inventory.php
+│       ├── inquiries.php
+│       ├── profile.php
+│       ├── analytics.php
+│       └── settings.php
+├── marketplace/
+│   ├── index.php
+│   ├── search.php
+│   ├── profile.php
+│   └── inquiry.php
+├── species/
+│   ├── directory.php
+│   └── profile.php
+├── api/
+│   ├── species.php
+│   ├── lgas.php
+│   ├── inventory.php
+│   ├── inquiries.php
+│   └── stats.php
+├── includes/
+│   ├── config.php
+│   ├── auth.php
+│   ├── functions.php
+│   ├── header.php
+│   └── footer.php
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── main.js
+│   └── images/
+│       ├── hero-timber.jpg
+│       ├── species-placeholder.jpg
+│       └── timber-placeholder.jpg
+├── uploads/
+│   ├── marketers/
+│   ├── species/
+│   └── inventory/
+└── database/
+    └── schema.sql
+
+
+Chart.js file
+Admin Dashboard (dashboard/index.php)
+
+Admin Reports (dashboard/reports.php)
+
+Marketer Dashboard (dashboard/marketer/index.php)
+
+Marketer Analytics (dashboard/marketer/analytics.php)
+
+
+
+├── species/
+│   ├── directory.php
+│   └── profile.php

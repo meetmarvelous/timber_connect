@@ -1,0 +1,80 @@
+marketplace from the header lead to  http://localhost/marketplace/ instead of http://localhost/timber-connect/marketplace/, fix other similar errors
+
+The css of the page http://localhost/timber-connect/marketplace/ isnt showing, it just plain css, check other pages in folders like marketplace and fix all together
+
+
+I gave you all my code so far. Let's debug it together to avoid security 
+
+Problem 1 : No tree listing in marketplace.
+
+The nav bar toggle on small device isnt working properly on almost all pages. For index.php homepage, when clicked , it scrolls down but doesnt return when clicked again. for some other pages, it doesnt even work when clicked.
+
+Problem 2 :
+I gave you tree data. It didnt show at all.
+Here was the displayed messages on the site:
+Featured Timber Listings
+ No timber listings available at the moment. Check back later or browse all listings.
+
+ Problem 3 : Login, Register page didnt show content properly.
+
+ Fix all and give me the complete, updated code of all pages.
+
+
+
+
+ Homepage showing Database Setup Required, meamwhile I have actualy imported the complete database myself. Remove that function from the homepage and give me the updated code
+
+
+
+ Why is it showing - "No timber listings available at the moment. Check back later" when there are quantity available in inventory. Fix that.
+
+ The inventory table only show the investory for the first four marketer id, where are the ones for other marketer from the given data. Conisder all tables aside inentory only, Give me the complete sql of both schema and datas from the data sI gave you. Dont be lazy, dont skip anything
+
+
+The nav bar problem on all pages when the nav bar toggle is clicked on devices with toggle, it show content the first time , but when clicked the second time, it doesnt close content. pages like
+http://localhost/timber-connect/
+http://localhost/timber-connect/marketplace/, 
+http://localhost/timber-connect/login.php
+http://localhost/timber-connect/marketer-register.php
+
+
+On pages like this, there is an additional problem of showing tyhe nav bar twice  
+ http://localhost/timber-connect/species/directory.php
+ http://localhost/timber-connect/about.php
+
+
+
+
+Lets use Dynamic Base URL
+$base_url = '/timber-connect'; is hardcoded and not dynamic.
+
+NOw let make it dynamic so it can work for domains later when the localhost/timber-connect is edited to my domain latertoo.
+
+and work for all links to project files. Tell me the basic edit to make, I prefer to make the edit on a single page like config.php or any better options and remove $base_url = '/timber-connect'; on every page it appears.
+
+The nav bar toggle doesnt work properly like before anymore ( for devices that it shows on). On the first clcik it opens properly, on the 2nd click to close , it goes up a bit and return. so it doesnt close. Where is the problem? Lets fix. Note:Im using index.php currently
+
+
+create a simple check page to show details like $base_path_only and $base_url
+
+
+Give me the code of all marketplace files 
+
+
+As for the app navigation
+From http://localhost/timber-connect/species/directory.php page, whenever I click about , contact or any other pages , it takes me to http://localhost/timber-connect/species/about.php, http://localhost/timber-connect/species/contact.php, and pages in that pattern, which is supposed to be http://localhost/timber-connect/about.php, http://localhost/timber-connect/contact.php.
+
+Same issues when you navigate from http://localhost/timber-connect/marketplace folder, http://localhost/timber-connect/dashboard folder etc
+
+Fix this generally for the pages and directories.
+
+
+
+http://localhost/timber-connect/dashboard/marketer/profile.php
+http://localhost/timber-connect/dashboard/marketer/inquiries.php
+http://localhost/timber-connect/dashboard/marketer/analytics.php
+
+
+Search functionality for timber size (e.g 2×4, or 2 x2) and price range doesn't work for Marketplace/search.php. Let's fix. 
+
+nav bar navigation

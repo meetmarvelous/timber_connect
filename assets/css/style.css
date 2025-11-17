@@ -1,0 +1,455 @@
+:root {
+  --primary-green: #228B22;
+  --earth-brown: #8B4513;
+  --warm-amber: #D2691E;
+  --slate-gray: #64748b;
+  --off-white: #f8fafc;
+  --forest-dark: #1a5e1a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Add this to fix background images */
+.hero-section {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--forest-dark) 100%);
+  color: white;
+  padding: 100px 0;
+}
+
+/* Ensure all images use proper paths */
+.species-image img,
+.hero-image img,
+.marketer-avatar img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.min-vh-80 {
+  min-height: 80vh;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.hero-buttons .btn {
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+/* Feature Cards */
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary-green), var(--forest-dark));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+  font-size: 2rem;
+}
+
+/* Species Cards */
+.species-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.species-card:hover {
+  transform: translateY(-5px);
+}
+
+.species-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.species-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.species-card:hover .species-image img {
+  transform: scale(1.05);
+}
+
+.species-content {
+  padding: 1.5rem;
+}
+
+.scientific-name {
+  color: var(--slate-gray);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.species-specs {
+  margin-bottom: 1rem;
+}
+
+.spec-badge {
+  display: inline-block;
+  background: var(--off-white);
+  color: var(--slate-gray);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--forest-dark);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--slate-gray);
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--primary-green);
+  border-color: var(--primary-green);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--forest-dark);
+  border-color: var(--forest-dark);
+}
+
+.btn-outline-primary {
+  border-color: var(--primary-green);
+  color: var(--primary-green);
+}
+
+.btn-outline-primary:hover {
+  background: var(--primary-green);
+  border-color: var(--primary-green);
+  color: white;
+}
+
+/* Navigation */
+.navbar {
+  background: white !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: var(--primary-green) !important;
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: var(--slate-gray) !important;
+  margin: 0 0.5rem;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--primary-green) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+      font-size: 2.5rem;
+  }
+  
+  .hero-buttons .btn {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+  }
+  
+  .section-title {
+      font-size: 2rem;
+  }
+}
+
+/* Loading States */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid var(--primary-green);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+  margin: 2rem auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Form Styles */
+.form-control:focus {
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 0.2rem rgba(34, 139, 34, 0.25);
+}
+
+.form-select:focus {
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 0.2rem rgba(34, 139, 34, 0.25);
+}
+
+/* ===== FOOTER STYLES ===== */
+.footer {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border-top: 1px solid #333;
+  margin-top: auto;
+}
+
+.footer-brand h4 {
+  font-size: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-link:hover {
+  background: #28a745;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+  border-color: #28a745;
+}
+
+.footer-links a {
+  transition: all 0.3s ease;
+  display: block;
+  padding: 4px 0;
+}
+
+.footer-links a:hover {
+  color: #28a745 !important;
+  transform: translateX(5px);
+}
+
+.contact-info h6 {
+  font-size: 0.9rem;
+}
+
+.contact-info p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+  border: none;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+/* Ensure proper page layout */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Responsive footer adjustments */
+@media (max-width: 768px) {
+  .footer {
+      text-align: center;
+  }
+  
+  .social-links {
+      justify-content: center;
+  }
+  
+  .contact-info .d-flex {
+      justify-content: center;
+      text-align: center;
+  }
+  
+  .back-to-top {
+      bottom: 20px;
+      right: 20px;
+      width: 45px;
+      height: 45px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+      padding-top: 3rem !important;
+      padding-bottom: 2rem !important;
+  }
+  
+  .footer-brand h4 {
+      font-size: 1.3rem;
+  }
+}
+
+
+
+
+
+/* States Coverage Section */
+.states-section {
+  background: linear-gradient(135deg, #228B22 0%, #1a5e1a 100%) !important;
+}
+
+.states-section .section-title {
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.states-section .section-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+}
+
+.state-card {
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.state-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.state-icon {
+  color: #ffffff;
+}
+
+.state-card h5 {
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.state-card p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1rem;
+}
+
+.state-card .btn-outline-light {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.state-card .btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: #228B22;
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Ensure good contrast for all text in states section */
+.states-section * {
+  color: inherit;
+}
